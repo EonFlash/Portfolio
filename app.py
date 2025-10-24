@@ -3,12 +3,12 @@ from datetime import datetime
 from flask import Flask, render_template, send_file, jsonify, request
 from supabase import create_client
 from dotenv import load_dotenv
-from flask import send_file
+from flask import redirect
 
 
 load_dotenv()
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='templates')
 
 supabase = create_client(
     os.getenv('VITE_SUPABASE_URL'),
@@ -137,30 +137,6 @@ RESUME_DATA = {
 def index():
     return render_template('index.html', data=RESUME_DATA)
 
-@app.route('/download-resume')
-def download_resume():
-    try:
-        resume_path = os.path.join(app.static_folder, 'Chintan_Gaur_Resume.pdf')
-
-        visitor_info = {
-            'timestamp': datetime.utcnow().isoformat(),
-            'user_agent': request.headers.get('User-Agent'),
-            'ip_address': request.headers.get('X-Forwarded-For', request.remote_addr)
-        }
-
-        # try:
-        #     supabase.table('resume_downloads').insert(visitor_info).execute()
-        # except Exception as e:
-        #     print(f"Error tracking download: {e}")
-
-        return send_file(
-            resume_path,
-            as_attachment=True,
-            download_name='Chintan_Gaur_Resume.pdf',
-            mimetype='application/pdf'
-        )
-    except Exception as e:
-        return jsonify({'error': str(e)}), 500
 
 @app.route('/track-visit', methods=['POST'])
 def track_visit():
