@@ -3,6 +3,8 @@ from datetime import datetime
 from flask import Flask, render_template, send_file, jsonify, request
 from supabase import create_client
 from dotenv import load_dotenv
+from flask import send_file
+
 
 load_dotenv()
 
@@ -146,10 +148,10 @@ def download_resume():
             'ip_address': request.headers.get('X-Forwarded-For', request.remote_addr)
         }
 
-        try:
-            supabase.table('resume_downloads').insert(visitor_info).execute()
-        except Exception as e:
-            print(f"Error tracking download: {e}")
+        # try:
+        #     supabase.table('resume_downloads').insert(visitor_info).execute()
+        # except Exception as e:
+        #     print(f"Error tracking download: {e}")
 
         return send_file(
             resume_path,
@@ -162,19 +164,20 @@ def download_resume():
 
 @app.route('/track-visit', methods=['POST'])
 def track_visit():
-    try:
-        visitor_info = {
-            'timestamp': datetime.utcnow().isoformat(),
-            'user_agent': request.headers.get('User-Agent'),
-            'ip_address': request.headers.get('X-Forwarded-For', request.remote_addr),
-            'page': request.json.get('page', '/')
-        }
+    # try:
+    #     visitor_info = {
+    #         'timestamp': datetime.utcnow().isoformat(),
+    #         'user_agent': request.headers.get('User-Agent'),
+    #         'ip_address': request.headers.get('X-Forwarded-For', request.remote_addr),
+    #         'page': request.json.get('page', '/')
+    #     }
 
-        supabase.table('portfolio_visits').insert(visitor_info).execute()
-        return jsonify({'success': True}), 200
-    except Exception as e:
-        print(f"Error tracking visit: {e}")
-        return jsonify({'error': str(e)}), 500
+    #     supabase.table('portfolio_visits').insert(visitor_info).execute()
+    #     return jsonify({'success': True}), 200
+    # except Exception as e:
+    #     print(f"Error tracking visit: {e}")
+    #     return jsonify({'error': str(e)}), 500
+    pass
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
