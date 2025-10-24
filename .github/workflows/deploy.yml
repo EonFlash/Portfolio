@@ -33,7 +33,7 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}"      >> $GITHUB_ENV
+          echo "VITE_SUPABASE_URL=${{ secrets.VITE_SUPABASE_URL }}" >> $GITHUB_ENV
           echo "VITE_SUPABASE_ANON_KEY=${{ secrets.VITE_SUPABASE_ANON_KEY }}" >> $GITHUB_ENV
 
       - name: Build static site
@@ -46,3 +46,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ${{ env.BUILD_DIR }}
+
+      - name: Output deployed site URL
+        run: |
+          echo "Deployed site URL: https://$GITHUB_ACTOR.github.io/$GITHUB_REPOSITORY/"
