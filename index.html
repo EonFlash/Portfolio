@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chintan Gaur - DATA AND GENERATIVE AI ENGINEER</title>
+    <title>{{ data.name }} - {{ data.title }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -146,7 +146,7 @@
     >
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
-          <div class="text-xl font-bold text-gray-900">Chintan Gaur</div>
+          <div class="text-xl font-bold text-gray-900">{{ data.name }}</div>
 
           <div class="hidden md:flex space-x-8">
             <a
@@ -280,19 +280,19 @@
             aria-live="polite"
           >
             <!-- JS will type this in for accessibility; keep original name as data attribute -->
-            <span id="hero-name-text" data-full-name="Chintan Gaur"></span
+            <span id="hero-name-text" data-full-name="{{ data.name }}"></span
             ><span class="typewriter-caret" aria-hidden="true"></span>
           </h1>
 
           <p class="text-2xl sm:text-3xl text-[rgba(255,255,255,0.85)] mb-8">
-            DATA AND GENERATIVE AI ENGINEER
+            {{ data.title }}
           </p>
 
           <div
             class="flex flex-wrap justify-center gap-6 mb-10 text-sm sm:text-base"
           >
             <a
-              href="tel:+91-7895687477"
+              href="tel:{{ data.contact.phone }}"
               class="flex items-center hover:opacity-90 transition-colors"
             >
               <svg
@@ -308,10 +308,10 @@
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 />
               </svg>
-              +91-7895687477
+              {{ data.contact.phone }}
             </a>
             <a
-              href="mailto:gaurchintan@gmail.com"
+              href="mailto:{{ data.contact.email }}"
               class="flex items-center hover:opacity-90 transition-colors"
             >
               <svg
@@ -327,10 +327,10 @@
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                 />
               </svg>
-              gaurchintan@gmail.com
+              {{ data.contact.email }}
             </a>
             <a
-              href="https://github.com/EonFlash"
+              href="https://{{ data.contact.github }}"
               target="_blank"
               class="flex items-center hover:opacity-90 transition-colors"
             >
@@ -339,10 +339,10 @@
                   d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
                 />
               </svg>
-              github.com/EonFlash
+              {{ data.contact.github }}
             </a>
             <a
-              href="https://linkedin.com/in/chintangaur"
+              href="https://{{ data.contact.linkedin }}"
               target="_blank"
               class="flex items-center hover:opacity-90 transition-colors"
             >
@@ -351,7 +351,7 @@
                   d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
                 />
               </svg>
-              linkedin.com/in/chintangaur
+              {{ data.contact.linkedin }}
             </a>
           </div>
 
@@ -387,7 +387,7 @@
           class="bg-gradient-to-r from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-2xl p-8 shadow-lg"
         >
           <p class="text-lg text-gray-700 leading-relaxed">
-            GenAI Data Engineer with over 2 years building production RAG systems, fine-tuning LLMs, and integrating FAISS and Pinecone vector databases for scalable semantic search. Skilled in document ingestion, embedding pipelines, and agentic ETL migration POCs. Certified: Oracle AI Vector Search Professional; LTIMindtree IGNITE.
+            {{ data.summary }}
           </p>
         </div>
       </div>
@@ -399,26 +399,26 @@
           Experience
         </h2>
         <div class="space-y-8">
-          
+          {% for job in data.experience %}
           <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
             <div
               class="flex flex-col md:flex-row md:justify-between md:items-start mb-6"
             >
               <div>
                 <h3 class="text-2xl font-bold text-gray-900">
-                  Data and GenAI Engineer
+                  {{ job.position }}
                 </h3>
                 <p class="text-xl text-[var(--accent)] font-semibold mt-1">
-                  LTIMindtree
+                  {{ job.company }}
                 </p>
               </div>
               <div class="mt-2 md:mt-0 text-right">
-                <p class="text-gray-600 font-medium">Jun 2024 - Present</p>
-                <p class="text-gray-500 text-sm">Bangalore, India</p>
+                <p class="text-gray-600 font-medium">{{ job.period }}</p>
+                <p class="text-gray-500 text-sm">{{ job.location }}</p>
               </div>
             </div>
             <ul class="space-y-3">
-              
+              {% for achievement in job.achievements %}
               <li class="flex items-start">
                 <svg
                   class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
@@ -431,139 +431,12 @@
                     clip-rule="evenodd"
                   />
                 </svg>
-                <span class="text-gray-700">Architected and spearheaded enterprise-grade RAG pipelines using Hugging Face and LangChain, achieving a 40% reduction in query latency during document data extraction.</span>
+                <span class="text-gray-700">{{ achievement }}</span>
               </li>
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Implemented and fine-tuned FAISS and Pinecone vector databases with bespoke, intelligent chunking strategies, reducing retrieval time by 65% and achieving average response speeds under 800 ms during document data extraction.</span>
-              </li>
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Fine-tuned and calibrated small LLM using LoRA and Parameter-Efficient Fine Tuning techniques to automate SAS-to-PySpark code translation, achieving 90% functional accuracy and accelerating ETL migration workflows by 60%.</span>
-              </li>
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Engineered and deployed AI-driven humanization and PII redaction pipelines, slashing manual content review time by 70% and achieving 95% accuracy in sensitive-data removal.</span>
-              </li>
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Designed and integrated prompt-injection protection and reasoning-agent frameworks with human-in-the-loop validation, improving system security posture by 95% and boosting LLM response correctness by 30%.</span>
-              </li>
-              
+              {% endfor %}
             </ul>
           </div>
-          
-          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
-            <div
-              class="flex flex-col md:flex-row md:justify-between md:items-start mb-6"
-            >
-              <div>
-                <h3 class="text-2xl font-bold text-gray-900">
-                  AI - ML Engineer
-                </h3>
-                <p class="text-xl text-[var(--accent)] font-semibold mt-1">
-                  HORIBA Ltd
-                </p>
-              </div>
-              <div class="mt-2 md:mt-0 text-right">
-                <p class="text-gray-600 font-medium">March 2024 - Jun 2024</p>
-                <p class="text-gray-500 text-sm">Delhi, India</p>
-              </div>
-            </div>
-            <ul class="space-y-3">
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Built foundational proficiency in AI/ML and Python: data preprocessing, feature engineering, model evaluation.</span>
-              </li>
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Gained basics of data modeling and schema design—conceptual/logical modeling, normalization, and structuring datasets for analytics and feature stores.</span>
-              </li>
-              
-              <li class="flex items-start">
-                <svg
-                  class="w-6 h-6 text-[var(--primary)] mr-3 flex-shrink-0 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-                <span class="text-gray-700">Performed extensive data cleaning and transformation, including missing-value imputation, outlier detection and handling, normalization/scaling, and automated ETL steps to prepare high-quality datasets for modeling.</span>
-              </li>
-              
-            </ul>
-          </div>
-          
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -574,38 +447,56 @@
           Projects & Proof of Concepts
         </h2>
         <div class="grid md:grid-cols-2 gap-8">
-          
+          {% for project in data.projects %}
           <div
             class="bg-gradient-to-br from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-2xl shadow-lg p-8 card-hover border border-gray-100 flex flex-col"
           >
             <div class="flex justify-between items-start mb-4">
               <h3 class="text-xl font-bold text-gray-900">
-                Multi-Agent Reasoning Workflow
+                {{ project.name }}
               </h3>
               <span
                 class="text-sm text-gray-600 font-medium whitespace-nowrap ml-4"
-                >Jan 2025 - Feb 2025</span
+                >{{ project.period }}</span
               >
             </div>
-            <p class="text-gray-700 mb-4">Chain multiple specialized agents like data extractor, summarizer and decision-engine to solve complex queries.</p>
-            
+            <p class="text-gray-700 mb-4">{{ project.description }}</p>
+            {% if project.details %}
+            <p class="text-gray-600 mb-4 text-sm">{{ project.details }}</p>
+            {% endif %}
             <div
               class="bg-white rounded-lg p-4 border-l-4 border-[var(--primary)] mb-4"
             >
               <p class="text-sm font-semibold text-gray-600 mb-1">Outcome:</p>
-              <p class="text-gray-700">Chained 4+ agents per request and delivered end-to-end results in under 2 minutes, improving stakeholder satisfaction by 30%.</p>
+              <p class="text-gray-700">{{ project.outcome }}</p>
             </div>
 
             <!-- Project links row -->
             <div class="mt-auto flex items-center justify-between gap-4">
               <div class="flex items-center gap-3">
-                 
+                {% if project.repo %}
+                <a
+                  href="{{ project.repo }}"
+                  target="_blank"
+                  class="inline-flex items-center px-3 py-2 btn-outline-accent rounded-md text-sm font-medium hover:opacity-95 transition"
+                >
+                  Repo
+                </a>
+                {% endif %} {% if project.demo %}
+                <a
+                  href="{{ project.demo }}"
+                  target="_blank"
+                  class="inline-flex items-center px-3 py-2 btn-outline-accent rounded-md text-sm font-medium hover:opacity-95 transition"
+                >
+                  Live Demo
+                </a>
+                {% endif %}
               </div>
 
               <!-- Go to project button: checks for project.link, falls back to '#' -->
               <div>
                 <a
-                  href="https://github.com/EonFlash"
+                  href="{% if project.link %}{{ project.link }}{% else %}#{% endif %}"
                   target="_blank"
                   class="inline-flex items-center px-4 py-2 btn-primary rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition transform hover:-translate-y-0.5"
                 >
@@ -627,223 +518,7 @@
               </div>
             </div>
           </div>
-          
-          <div
-            class="bg-gradient-to-br from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-2xl shadow-lg p-8 card-hover border border-gray-100 flex flex-col"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-gray-900">
-                Knowledge Base Retrieval Agent
-              </h3>
-              <span
-                class="text-sm text-gray-600 font-medium whitespace-nowrap ml-4"
-                >Feb 2025 - Mar 2025</span
-              >
-            </div>
-            <p class="text-gray-700 mb-4">Developed an end-to-end RAG agent to ingest and serve insights from mixed document sources via a single API.</p>
-            
-            <div
-              class="bg-white rounded-lg p-4 border-l-4 border-[var(--primary)] mb-4"
-            >
-              <p class="text-sm font-semibold text-gray-600 mb-1">Outcome:</p>
-              <p class="text-gray-700">Built a FAISS vector database index for 100+ document embeddings, achieving average retrieval times of 650 ms.</p>
-            </div>
-
-            <!-- Project links row -->
-            <div class="mt-auto flex items-center justify-between gap-4">
-              <div class="flex items-center gap-3">
-                 
-              </div>
-
-              <!-- Go to project button: checks for project.link, falls back to '#' -->
-              <div>
-                <a
-                  href="https://github.com/EonFlash"
-                  target="_blank"
-                  class="inline-flex items-center px-4 py-2 btn-primary rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition transform hover:-translate-y-0.5"
-                >
-                  Go to project
-                  <svg
-                    class="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div
-            class="bg-gradient-to-br from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-2xl shadow-lg p-8 card-hover border border-gray-100 flex flex-col"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-gray-900">
-                Alteryx to dbt Migration
-              </h3>
-              <span
-                class="text-sm text-gray-600 font-medium whitespace-nowrap ml-4"
-                >Jul 2024 - Present</span
-              >
-            </div>
-            <p class="text-gray-700 mb-4">Built an agent-driven pipeline that systematized extraction of Alteryx workflows, converted transformation logic to modular dbt models, and generated dbt tests and documentation.</p>
-            
-            <p class="text-gray-600 mb-4 text-sm">Automated 80% of routine transformation translation and test generation; cut initial migration effort by 60% and reduced validation cycles from days to hours.</p>
-            
-            <div
-              class="bg-white rounded-lg p-4 border-l-4 border-[var(--primary)] mb-4"
-            >
-              <p class="text-sm font-semibold text-gray-600 mb-1">Outcome:</p>
-              <p class="text-gray-700">Demonstrated translation of transformation logic. (POC deployed on client System)</p>
-            </div>
-
-            <!-- Project links row -->
-            <div class="mt-auto flex items-center justify-between gap-4">
-              <div class="flex items-center gap-3">
-                 
-              </div>
-
-              <!-- Go to project button: checks for project.link, falls back to '#' -->
-              <div>
-                <a
-                  href="https://github.com/EonFlash"
-                  target="_blank"
-                  class="inline-flex items-center px-4 py-2 btn-primary rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition transform hover:-translate-y-0.5"
-                >
-                  Go to project
-                  <svg
-                    class="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div
-            class="bg-gradient-to-br from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-2xl shadow-lg p-8 card-hover border border-gray-100 flex flex-col"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-gray-900">
-                Alteryx to KNIME Migration
-              </h3>
-              <span
-                class="text-sm text-gray-600 font-medium whitespace-nowrap ml-4"
-                >Jan 2025 - Present</span
-              >
-            </div>
-            <p class="text-gray-700 mb-4">Created an agentic migration path to translate Alteryx workflows into KNIME-compatible, Python-based nodes and reusable components without LLM intervention.</p>
-            
-            <p class="text-gray-600 mb-4 text-sm">Attained 90% parity for core ETL logic and minimized conversion time by 70% using reusable templates.</p>
-            
-            <div
-              class="bg-white rounded-lg p-4 border-l-4 border-[var(--primary)] mb-4"
-            >
-              <p class="text-sm font-semibold text-gray-600 mb-1">Outcome:</p>
-              <p class="text-gray-700">Verified parity of core ETL logic and created reusable Python-node templates for KNIME.</p>
-            </div>
-
-            <!-- Project links row -->
-            <div class="mt-auto flex items-center justify-between gap-4">
-              <div class="flex items-center gap-3">
-                 
-              </div>
-
-              <!-- Go to project button: checks for project.link, falls back to '#' -->
-              <div>
-                <a
-                  href="https://github.com/EonFlash"
-                  target="_blank"
-                  class="inline-flex items-center px-4 py-2 btn-primary rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition transform hover:-translate-y-0.5"
-                >
-                  Go to project
-                  <svg
-                    class="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          <div
-            class="bg-gradient-to-br from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-2xl shadow-lg p-8 card-hover border border-gray-100 flex flex-col"
-          >
-            <div class="flex justify-between items-start mb-4">
-              <h3 class="text-xl font-bold text-gray-900">
-                Data Stage to Big Query Migration
-              </h3>
-              <span
-                class="text-sm text-gray-600 font-medium whitespace-nowrap ml-4"
-                >Jul 2025 - Present</span
-              >
-            </div>
-            <p class="text-gray-700 mb-4">Applied agents to parse DataStage job metadata, map schemas and transformations to BigQuery SQL, and run validation tests against sample datasets.</p>
-            
-            <div
-              class="bg-white rounded-lg p-4 border-l-4 border-[var(--primary)] mb-4"
-            >
-              <p class="text-sm font-semibold text-gray-600 mb-1">Outcome:</p>
-              <p class="text-gray-700">Enabled computerized schema mapping and data-quality validation to accelerate migration planning.</p>
-            </div>
-
-            <!-- Project links row -->
-            <div class="mt-auto flex items-center justify-between gap-4">
-              <div class="flex items-center gap-3">
-                 
-              </div>
-
-              <!-- Go to project button: checks for project.link, falls back to '#' -->
-              <div>
-                <a
-                  href="https://github.com/EonFlash"
-                  target="_blank"
-                  class="inline-flex items-center px-4 py-2 btn-primary rounded-lg text-sm font-semibold shadow-sm hover:shadow-md transition transform hover:-translate-y-0.5"
-                >
-                  Go to project
-                  <svg
-                    class="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-          
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -872,77 +547,12 @@
               <h3 class="text-2xl font-bold text-gray-900">Technical Skills</h3>
             </div>
             <div class="flex flex-wrap gap-2">
-              
+              {% for skill in data.skills.technical.split(', ') %}
               <span
                 class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >Python</span
+                >{{ skill }}</span
               >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >Flask</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >SQL</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >LangChain</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >Hugging Face</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >LangGraph</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >CrewAI</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >OpenAI APIs</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >LLMs Transformers</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >FAISS</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >Pinecone</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >ChromaDB</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >Prompt engineering</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(6,182,212,0.08)] text-[var(--primary)] rounded-lg text-sm font-medium border border-[rgba(6,182,212,0.12)]"
-                >Parameter-Efficient FineTuning</span
-              >
-              
+              {% endfor %}
             </div>
           </div>
 
@@ -964,37 +574,12 @@
               <h3 class="text-2xl font-bold text-gray-900">Soft Skills</h3>
             </div>
             <div class="flex flex-wrap gap-2">
-              
+              {% for skill in data.skills.soft.split(', ') %}
               <span
                 class="skill-badge px-3 py-1.5 bg-[rgba(124,58,237,0.06)] text-[var(--accent)] rounded-lg text-sm font-medium border border-[rgba(124,58,237,0.08)]"
-                >Strategic problem-solving</span
+                >{{ skill }}</span
               >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(124,58,237,0.06)] text-[var(--accent)] rounded-lg text-sm font-medium border border-[rgba(124,58,237,0.08)]"
-                >Cross-functional collaboration</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(124,58,237,0.06)] text-[var(--accent)] rounded-lg text-sm font-medium border border-[rgba(124,58,237,0.08)]"
-                >Technical communication</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(124,58,237,0.06)] text-[var(--accent)] rounded-lg text-sm font-medium border border-[rgba(124,58,237,0.08)]"
-                >Critical thinking</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(124,58,237,0.06)] text-[var(--accent)] rounded-lg text-sm font-medium border border-[rgba(124,58,237,0.08)]"
-                >Decision-making</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-[rgba(124,58,237,0.06)] text-[var(--accent)] rounded-lg text-sm font-medium border border-[rgba(124,58,237,0.08)]"
-                >Time management</span
-              >
-              
+              {% endfor %}
             </div>
           </div>
 
@@ -1016,52 +601,12 @@
               <h3 class="text-2xl font-bold text-gray-900">Tools</h3>
             </div>
             <div class="flex flex-wrap gap-2">
-              
+              {% for tool in data.skills.tools.split(', ') %}
               <span
                 class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >AWS S3</span
+                >{{ tool }}</span
               >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >Athena</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >EC2</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >dbt</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >Git</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >Snowflake</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >KNIME</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >DataStage</span
-              >
-              
-              <span
-                class="skill-badge px-3 py-1.5 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-300"
-                >SQL</span
-              >
-              
+              {% endfor %}
             </div>
           </div>
         </div>
@@ -1074,7 +619,7 @@
           Certifications
         </h2>
         <div class="grid md:grid-cols-2 gap-6">
-          
+          {% for cert in data.certifications %}
           <div
             class="bg-gradient-to-r from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-xl shadow-md p-6 card-hover border border-[rgba(124,58,237,0.06)]"
           >
@@ -1094,13 +639,17 @@
               </svg>
               <div>
                 <h3 class="text-lg font-bold text-gray-900 mb-1">
-                  Oracle - AI Vector Search Professional Certification
+                  {{ cert.name }}
                 </h3>
-                
-                <p class="text-gray-600 text-sm mb-2">Sep 2025</p>
-                
+                {% if cert.issuer %}
+                <p class="text-[var(--accent)] font-medium mb-1">
+                  {{ cert.issuer }}
+                </p>
+                {% endif %}
+                <p class="text-gray-600 text-sm mb-2">{{ cert.date }}</p>
+                {% if cert.verification %}
                 <a
-                  href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=9318C5DF1E7535A62CF68BD19AB69C0CF51E585A229FE3249A0A95B6614D8424"
+                  href="{{ cert.verification }}"
                   target="_blank"
                   class="inline-flex items-center text-[var(--accent)] hover:underline text-sm font-medium"
                 >
@@ -1119,43 +668,11 @@
                     />
                   </svg>
                 </a>
-                
+                {% endif %}
               </div>
             </div>
           </div>
-          
-          <div
-            class="bg-gradient-to-r from-[var(--card-grad-from)] to-[var(--card-grad-to)] rounded-xl shadow-md p-6 card-hover border border-[rgba(124,58,237,0.06)]"
-          >
-            <div class="flex items-start">
-              <svg
-                class="w-10 h-10 text-[var(--primary)] mr-4 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-                />
-              </svg>
-              <div>
-                <h3 class="text-lg font-bold text-gray-900 mb-1">
-                  IGNITE ASP.NET Core &amp; C# Training
-                </h3>
-                
-                <p class="text-[var(--accent)] font-medium mb-1">
-                  LTIMindtree
-                </p>
-                
-                <p class="text-gray-600 text-sm mb-2">Jun 2023</p>
-                
-              </div>
-            </div>
-          </div>
-          
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -1166,59 +683,37 @@
           Education
         </h2>
         <div class="space-y-6">
-          
+          {% for edu in data.education %}
           <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
             <div
               class="flex flex-col md:flex-row md:justify-between md:items-start"
             >
               <div class="flex-1">
                 <h3 class="text-2xl font-bold text-gray-900">
-                  Graphic Era University
+                  {{ edu.institution }}
                 </h3>
                 <p class="text-lg text-[var(--accent)] font-semibold mt-2">
-                  B.Tech – Computer Science &amp; Engineering
+                  {{ edu.degree }}
                 </p>
-                
-                <p class="text-gray-700 mt-2 font-medium">8.69 CGPA</p>
-                 
-              </div>
-              <div class="mt-4 md:mt-0 md:text-right">
-                
-                <p class="text-gray-600 font-medium">Jul 2019 - Jul 2024</p>
-                
-                <p class="text-gray-500 text-sm">Dehradun, India</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="bg-white rounded-2xl shadow-lg p-8 card-hover">
-            <div
-              class="flex flex-col md:flex-row md:justify-between md:items-start"
-            >
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold text-gray-900">
-                  Scholars Academy
-                </h3>
-                <p class="text-lg text-[var(--accent)] font-semibold mt-2">
-                  PCM + CS
-                </p>
-                 
+                {% if edu.grade %}
+                <p class="text-gray-700 mt-2 font-medium">{{ edu.grade }}</p>
+                {% endif %} {% if edu.details %}
                 <ul class="mt-2 space-y-1">
-                  
-                  <li class="text-gray-600">CBSE 12th - 70%, Jan 2019</li>
-                  
-                  <li class="text-gray-600">CBSE 10th - 9.4 CGPA, Jan 2017</li>
-                  
+                  {% for detail in edu.details %}
+                  <li class="text-gray-600">{{ detail }}</li>
+                  {% endfor %}
                 </ul>
-                
+                {% endif %}
               </div>
               <div class="mt-4 md:mt-0 md:text-right">
-                
-                <p class="text-gray-500 text-sm">Roorkee, Uttarakhand, India</p>
+                {% if edu.period %}
+                <p class="text-gray-600 font-medium">{{ edu.period }}</p>
+                {% endif %}
+                <p class="text-gray-500 text-sm">{{ edu.location }}</p>
               </div>
             </div>
           </div>
-          
+          {% endfor %}
         </div>
       </div>
     </section>
@@ -1228,7 +723,7 @@
         <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
         <div class="flex flex-wrap justify-center gap-6 mb-8">
           <a
-            href="mailto:gaurchintan@gmail.com"
+            href="mailto:{{ data.contact.email }}"
             class="flex items-center hover:opacity-90 transition-colors"
           >
             <svg
@@ -1244,10 +739,10 @@
                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
               />
             </svg>
-            gaurchintan@gmail.com
+            {{ data.contact.email }}
           </a>
           <a
-            href="https://github.com/EonFlash"
+            href="https://{{ data.contact.github }}"
             target="_blank"
             class="flex items-center hover:opacity-90 transition-colors"
           >
@@ -1259,7 +754,7 @@
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/chintangaur"
+            href="https://{{ data.contact.linkedin }}"
             target="_blank"
             class="flex items-center hover:opacity-90 transition-colors"
           >
@@ -1293,7 +788,7 @@
 
         <div class="mt-8 pt-8 border-t border-[rgba(255,255,255,0.08)]">
           <p class="text-[rgba(255,255,255,0.7)]">
-            &copy; 2025 Chintan Gaur. All rights reserved.
+            &copy; 2025 {{ data.name }}. All rights reserved.
           </p>
         </div>
       </div>
